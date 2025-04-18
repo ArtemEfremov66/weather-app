@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: weather-service
+  weather:
+    api:
+      url: https://api.weatherapi.com/v1
+      key: ${WEATHER_API_KEY:test-key} # Из переменных окружения
+      mock-enabled: false
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator

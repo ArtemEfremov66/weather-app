@@ -1,0 +1,17 @@
+# Общие настройки Spring
+spring:
+  profiles:
+    active: default
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+
+# Настройки Actuator для всех сервисов
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+  endpoint:
+    health:
+      show-details: always

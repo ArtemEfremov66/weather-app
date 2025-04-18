@@ -1,0 +1,8 @@
+weather:
+  client:
+    connect-timeout: 5000
+    read-timeout: 10000
+    max-retries: 3
+    cache:
+      enabled: true
+      ttl-minutes: 30
