@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ArtemEfremov66/weather-config-repo.git
+          search-paths: '{application}' # Ищет конфиги в подпапках
+          clone-on-start: true # Клонирует репозиторий при старте
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+  security:
+    user:
+      name: config-admin
+      password: password
